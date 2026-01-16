@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lens Avenue Opticals | Premium Eyewear Thiruvalla</title>
+    <title>Lens Avenue Opticals | Premium Eyewear</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -16,9 +16,8 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-        body { background-color: var(--ita-white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+        body { background-color: var(--ita-white); color: var(--dark); line-height: 1.6; }
 
-        /* Italian Theme Top Bar */
         .top-bar { height: 10px; display: flex; width: 100%; position: sticky; top: 0; z-index: 1000; }
         .b-green { background: var(--ita-green); flex: 1; }
         .b-white { background: var(--ita-white); flex: 1; }
@@ -26,40 +25,38 @@
 
         header { text-align: center; padding: 40px 20px 20px; }
         .logo-img { width: 110px; height: auto; margin-bottom: 10px; }
-        h1 { font-size: 2.2rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
-        .sub-text { color: var(--ita-green); font-weight: 700; letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 15px; }
+        h1 { font-size: 2.6rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 700; margin-bottom: 0; }
+        .sub-text { color: var(--ita-green); font-weight: 700; letter-spacing: 4px; font-size: 0.85rem; margin-bottom: 15px; }
         
-        .header-contact { margin-top: 5px; padding-bottom: 20px; border-bottom: 1px solid #eee; width: 100%; max-width: 600px; margin: 0 auto; }
-        .header-contact p { font-size: 0.95rem; color: #555; margin: 5px 0; }
+        .header-contact { margin-top: 5px; padding-bottom: 20px; border-bottom: 1px solid #eee; display: inline-block; width: 100%; max-width: 600px; }
+        .header-contact p { font-size: 0.95rem; color: #555; margin: 2px 0; }
+        .header-contact .phone { font-weight: 700; color: var(--dark); font-size: 1.1rem; margin-top: 5px; }
         .header-contact i { color: var(--ita-red); margin-right: 8px; }
 
-        /* Gallery Grid */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; transition: 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
 
-        /* Social Section */
-        .social-section { background: #fdfdfd; padding: 50px 20px; text-align: center; border-top: 1px solid #f0f0f0; }
-        .social-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-        .btn { text-decoration: none; padding: 14px 28px; border-radius: 6px; color: white; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s; font-size: 0.9rem; }
+        .social-section { background: #f8f8f8; padding: 40px 20px; text-align: center; }
+        .social-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn { text-decoration: none; padding: 12px 25px; border-radius: 4px; color: white; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
         .wa-btn { background: #25D366; }
         .ig-btn { background: #E4405F; }
         .fb-btn { background: #1877F2; }
         .mail-btn { background: #EA4335; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn:hover { opacity: 0.85; transform: translateY(-2px); }
 
-        /* Brands & Banner */
-        .brands-section { padding: 40px 20px; text-align: center; background: #fff; }
-        .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; max-width: 1000px; margin: 30px auto; }
-        .brand-name { font-weight: 700; font-size: 0.9rem; border: 1px solid #eee; padding: 15px; text-transform: uppercase; background: #fafafa; }
-        
-        /* Fixed Banner Styling */
-        .bottom-banner { width: 95%; max-width: 1100px; height: auto; margin: 40px auto; display: block; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .brands-section { padding: 50px 20px; text-align: center; }
+        .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; max-width: 900px; margin: 25px auto; }
+        .brand-name { font-weight: 700; font-size: 1rem; border: 1px solid #eee; padding: 12px; background: #fff; text-transform: uppercase; }
 
-        /* Map Section with Correct Height */
-        .map-section { width: 100%; height: 450px; border: 0; margin-top: 30px; display: block; }
+        /* Fixed Banner Image */
+        .bottom-banner { width: 95%; max-width: 1100px; height: auto; max-height: 300px; object-fit: cover; margin: 20px auto; display: block; border-radius: 10px; }
 
-        footer { background: var(--dark); color: white; padding: 40px 20px; text-align: center; }
-        .footer-logo { font-size: 0.75rem; color: #888; margin-top: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        /* Corrected Map Size */
+        .map-section { width: 100%; height: 450px; border: 0; margin-top: 20px; }
+
+        footer { background: var(--dark); color: white; padding: 30px; text-align: center; }
+        .footer-logo { font-size: 0.7rem; color: #777; margin-top: 15px; text-transform: uppercase; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -76,30 +73,30 @@
         <p class="sub-text">OPTICALS & EYE CLINIC</p>
         <div class="header-contact">
             <p><i class="fas fa-map-marker-alt"></i> Kizhakkan Muthoor, Thiruvalla - 689103</p>
-            <p><i class="fas fa-phone-alt"></i> 6238308850, 9562210020</p>
+            <p class="phone"><i class="fas fa-phone-alt"></i> 6238308850, 9562210020</p>
         </div>
     </header>
 
     <section class="gallery">
-        <img src="la1.jpg" alt="Showroom Interior">
-        <img src="la2.jpg" alt="Eyewear Collection">
-        <img src="la3.jpg" alt="Modern Frames">
-        <img src="la4.jpg" alt="Precision Lenses">
-        <img src="la5.jpg" alt="Eye Care Clinic">
+        <img src="la1.jpg" alt="Interior">
+        <img src="la2.jpg" alt="Collection">
+        <img src="la3.jpg" alt="Showroom">
+        <img src="la4.jpg" alt="Frames">
+        <img src="la5.jpg" alt="Display">
     </section>
 
     <section class="social-section">
-        <h3>Book Your Appointment</h3>
+        <h3>Connect With Us</h3>
         <div class="social-buttons">
             <a href="https://wa.me/916238308850" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="https://www.instagram.com/lens_avenue_2024" class="btn ig-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.instagram.com/lens_avenue_2024?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn ig-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61586786545313" class="btn fb-btn" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email Us</a>
+            <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email</a>
         </div>
     </section>
 
     <section class="brands-section">
-        <h3>AVAILABLE PREMIUM BRANDS</h3>
+        <h3>AVAILABLE BRANDS</h3>
         <div class="brand-grid">
             <div class="brand-name">Ray-Ban</div>
             <div class="brand-name">Oakley</div>
@@ -108,14 +105,14 @@
             <div class="brand-name">Zeiss</div>
             <div class="brand-name">Essilor</div>
         </div>
-        <img src="la6.jpg" alt="Lens Avenue Banner" class="bottom-banner">
+        <img src="la6.jpg" alt="Lens Avenue Branding" class="bottom-banner">
     </section>
 
-    <iframe class="map-section" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.425867201948!2d76.57711417573031!3d9.38918239068805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b063999f3984983%3A0xa07fd6fed737f8bf!2sLens+Avenue+Opticals+%26+Eye+Clinic!5e0!3m2!1sen!2sin!4v1705436328321!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    <iframe class="map-section" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.4259799298495!2d76.58144607418704!3d9.406529288410222!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4f13.1!3m3!1m2!1s0x3b062500496229df%3A0xd34bbb8176123248!2sLens%20Avenue%20Opticals!5e0!3m2!1sen!2sin!4v1737050500000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <footer>
-        <p>Branches: Nagampadam (Kottayam) | Puthupally | Pandalam</p>
-        <div class="footer-logo">Design, Tech and Powered  by MaxEfex</div>
+        <p>Other Branches: Thiruvalla| Pandalam| Kottayam| Ettumanoor| Poochankal</p>
+        <div class="footer-logo">Powered and Tech by MaxEfex 2K26</div>
     </footer>
 
 </body>
