@@ -24,13 +24,12 @@
         .b-white { background: var(--ita-white); flex: 1; }
         .b-red { background: var(--ita-red); flex: 1; }
 
-        /* Header Section - Filled to avoid empty feeling */
+        /* Header Section */
         header { text-align: center; padding: 40px 20px 20px; }
         .logo-img { width: 110px; height: auto; margin-bottom: 10px; }
         h1 { font-size: 2.6rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 700; margin-bottom: 0; }
         .sub-text { color: var(--ita-green); font-weight: 700; letter-spacing: 4px; font-size: 0.85rem; margin-bottom: 15px; }
         
-        /* New Address & Phone Section under Logo */
         .header-contact { margin-top: 5px; padding-bottom: 20px; border-bottom: 1px solid #eee; display: inline-block; width: 100%; max-width: 600px; }
         .header-contact p { font-size: 0.95rem; color: #555; margin: 2px 0; }
         .header-contact .phone { font-weight: 700; color: var(--dark); font-size: 1.1rem; margin-top: 5px; }
@@ -48,7 +47,8 @@
         .wa-btn { background: #25D366; }
         .ig-btn { background: #E4405F; }
         .fb-btn { background: #1877F2; }
-        .btn:hover { opacity: 0.85; }
+        .mail-btn { background: #ea4335; } /* Gmail Red */
+        .btn:hover { opacity: 0.85; transform: scale(1.05); }
 
         /* Brands Section */
         .brands-section { padding: 50px 20px; text-align: center; }
@@ -61,7 +61,6 @@
 
         footer { background: var(--dark); color: white; padding: 30px; text-align: center; }
         .footer-logo { font-size: 0.7rem; color: #777; margin-top: 15px; text-transform: uppercase; letter-spacing: 2px; }
-
     </style>
 </head>
 <body>
@@ -94,9 +93,13 @@
     <section class="social-section">
         <h3>Connect With Us</h3>
         <div class="social-buttons">
-            <a href="https://wa.me/916238308850" class="btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="#" class="btn ig-btn"><i class="https://www.instagram.com/lens_avenue_2024?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></i> Instagram</a>
-            <a href="#" class="btn fb-btn"><i class="https://www.facebook.com/profile.php?id=61586786545313"></i> Facebook</a>
+            <a href="https://wa.me/916238308850" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            
+            <a href="https://www.instagram.com/lens_avenue_2024?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn ig-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61586786545313" class="btn fb-btn" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            
+            <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email</a>
         </div>
     </section>
 
@@ -122,6 +125,4 @@
     </footer>
 
 </body>
-
 </html>
-
