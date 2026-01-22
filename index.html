@@ -23,31 +23,45 @@
         .b-white { background: var(--ita-white); flex: 1; }
         .b-red { background: var(--ita-red); flex: 1; }
 
-        header { text-align: center; padding: 40px 20px 20px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+        header { text-align: center; padding: 40px 20px 20px; border-bottom: 1px solid #eee; }
         .logo-img { width: 110px; height: auto; margin-bottom: 10px; }
-        h1 { font-size: 2.6rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 700; margin-bottom: 0; }
+        h1 { font-size: 2.6rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
+        
+        .map-link { display: inline-block; color: var(--ita-red); text-decoration: none; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid var(--ita-red); padding: 5px 15px; border-radius: 20px; transition: 0.3s; }
+        .map-link:hover { background: var(--ita-red); color: white; }
+
         .sub-text { color: var(--ita-green); font-weight: 700; letter-spacing: 4px; font-size: 0.85rem; margin-bottom: 15px; }
         
         .header-contact { margin-top: 5px; display: inline-block; width: 100%; max-width: 600px; }
         .header-contact p { font-size: 0.95rem; color: #555; margin: 2px 0; }
-        .header-contact i { color: var(--ita-red); margin-right: 8px; }
+        .header-contact i { color: var(--ita-green); margin-right: 8px; }
 
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-
-        .social-section { background: #f8f8f8; padding: 40px 20px; text-align: center; }
-        .social-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
-        .btn { text-decoration: none; padding: 12px 25px; border-radius: 4px; color: white; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        /* Contact Section Styles */
+        .contact-section { background: #fff; padding: 30px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .btn-container { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
+        .btn { text-decoration: none; padding: 12px 20px; border-radius: 4px; color: white; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; font-size: 0.9rem; }
+        
+        .call-btn { background: var(--ita-red); }
         .wa-btn { background: #25D366; }
+        .mail-btn { background: var(--dark); }
         .ig-btn { background: #E4405F; }
         .fb-btn { background: #1877F2; }
-        .mail-btn { background: #EA4335; }
+        
         .btn:hover { opacity: 0.85; transform: translateY(-2px); }
 
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+
+        .connect-section { background: #f8f8f8; padding: 40px 20px; text-align: center; }
+
         .brands-section { padding: 50px 20px; text-align: center; }
-        .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; max-width: 900px; margin: 25px auto; }
+        .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; max-width: 900px; margin: 25px auto 10px; }
         .brand-name { font-weight: 700; font-size: 1rem; border: 1px solid #eee; padding: 12px; background: #fff; text-transform: uppercase; }
-        .bottom-banner { width: 95%; max-width: 1100px; height: auto; max-height: 300px; object-fit: cover; margin: 20px auto; display: block; border-radius: 10px; }
+        
+        .brand-img-logos { width: 100%; max-width: 700px; height: auto; margin: 20px auto; display: block; filter: grayscale(20%); }
+        .brand-disclaimer { font-size: 0.75rem; color: #888; font-style: italic; margin-bottom: 30px; }
+        
+        .bottom-banner { width: 95%; max-width: 1100px; height: auto; max-height: 350px; object-fit: cover; margin: 20px auto; display: block; border-radius: 10px; }
 
         .review-section { padding: 40px 20px; text-align: center; border-top: 1px solid #eee; background: #fff; }
         .review-btn { text-decoration: none; padding: 15px 30px; background: #4285F4; color: white; border-radius: 4px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
@@ -70,12 +84,23 @@
     <header>
         <img src="lens.png" alt="Lens Avenue Logo" class="logo-img">
         <h1>Lens Avenue</h1>
+        <a href="https://maps.app.goo.gl/3yliSQAlBjsRSDIS6" class="map-link" target="_blank">
+            <i class="fas fa-location-arrow"></i> GET DIRECTIONS
+        </a>
         <p class="sub-text">OPTICALS & EYE CLINIC</p>
         <div class="header-contact">
             <p><i class="fas fa-map-marker-alt"></i> Kizhakkan Muthoor, Thiruvalla - 689103</p>
-            <p><i class="fas fa-phone-alt"></i> 6238308850, 9562210020</p>
         </div>
     </header>
+
+    <section class="contact-section">
+        <h3>Contact Us</h3>
+        <div class="btn-container">
+            <a href="tel:9562210020" class="btn call-btn"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/919562210020" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+    </section>
 
     <section class="gallery">
         <img src="la1.jpg" alt="Showroom">
@@ -98,25 +123,13 @@
         <img src="gallery/444.jpg" alt="Collection">
         <img src="gallery/1111.jpg" alt="Collection">
         <img src="gallery/2222.jpg" alt="Collection">
-        <img src="gallery/3333.jpg" alt="Collection">
-        <img src="gallery/4444.jpg" alt="Collection">
-        <img src="gallery/11111.jpg" alt="Collection">
-        <img src="gallery/22222.jpg" alt="Collection">
-        <img src="gallery/33333.jpg" alt="Collection">
-        <img src="gallery/44444.jpg" alt="Collection">
-        <img src="gallery/111111.jpg" alt="Collection">
-        <img src="gallery/222222.jpg" alt="Collection">
-        <img src="gallery/333333.jpg" alt="Collection">
-        <img src="gallery/444444.jpg" alt="Collection">
     </section>
 
-    <section class="social-section">
+    <section class="connect-section">
         <h3>Connect With Us</h3>
-        <div class="social-buttons">
-            <a href="https://wa.me/916238308850" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="btn-container">
             <a href="https://www.instagram.com/lens_avenue_2024" class="btn ig-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61586786545313" class="btn fb-btn" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email</a>
         </div>
     </section>
 
@@ -130,22 +143,33 @@
             <div class="brand-name">Zeiss</div>
             <div class="brand-name">Essilor</div>
         </div>
-        <img src="la6.jpg" alt="Banner" class="bottom-banner">
-    
+        
+        <img src="brands.jpg" alt="Brand Logos" class="brand-img-logos">
+        <p class="brand-disclaimer">*Note: Some brands are shown for visual representation and may not be stocked in-shop.</p>
+        
+        <img src="la6.jpg" alt="Promo Banner" class="bottom-banner">
+    </section>
 
     <section class="review-section">
         <h3>5.0 ★ Highly Rated</h3>
-        <p style="margin-bottom: 20px; color: #666;">Check out our 3 new reviews on Google</p>
+        <p style="margin-bottom: 20px; color: #666;">Check out our 21 reviews on Google</p>
         <a href="https://search.google.com/local/writereview?placeid=ChIJ3yliSQAlBjsRSDISdoG7S9M" target="_blank" class="review-btn">
             <i class="fab fa-google"></i> WRITE A REVIEW
         </a>
     </section>
 
-    <iframe class="map-section" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.331206122557!2d76.5824987!3d9.4065241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062500496229df%3A0xd34bbb8176123248!2sLens%20Avenue%20Opticals!5e0!3m2!1sen!2sin!4v1705843200000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="map-section" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.152434689255!2d76.5746779!3d9.495744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062500496228df%3A0xd34bbb8176123248!2sLens%20Avenue%20Opticals!5e0!3m2!1sen!2sin!4v1705910000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <footer>
         <p>Branches: Thiruvalla | Pandalam | Kottayam | Ettumanoor | Poochankal</p>
-        <div class="footer-logo">Powered and Tech by MaxEfex 2K26</div>
+        <div class="footer-rights-bar">
+    <div class="rights-text">
+        © 2026 Lens Avenue Opticals. All Rights Reserved.
+    </div>
+    <div class="max-signature">
+        Digital Architecture & Tech by <strong>MaxEfex 2K26</strong>
+    </div>
+</div>
     </footer>
 
 </body>
