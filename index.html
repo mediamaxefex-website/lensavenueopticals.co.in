@@ -63,6 +63,18 @@
         
         .bottom-banner { width: 95%; max-width: 1100px; height: auto; max-height: 350px; object-fit: cover; margin: 20px auto; display: block; border-radius: 10px; }
 
+        /* ADDED WHATSAPP ENQUIRY STYLES */
+        .enquiry-section { padding: 60px 20px; background: #fdfdfd; text-align: center; border-bottom: 1px solid #eee; }
+        .enquiry-container { max-width: 700px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; border-top: 5px solid var(--ita-green); box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+        .enquiry-container h2 { text-align: center; margin-bottom: 25px; color: var(--dark); letter-spacing: 2px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Montserrat', sans-serif; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 10px; }
+        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer; color: #555; }
+        .wa-submit-btn { background: #25D366; color: white; border: none; padding: 18px; width: 100%; border-radius: 6px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; transition: 0.3s; }
+        .wa-submit-btn:hover { background: #128c7e; transform: translateY(-2px); }
+
         .review-section { padding: 40px 20px; text-align: center; border-top: 1px solid #eee; background: #fff; }
         .review-btn { text-decoration: none; padding: 15px 30px; background: #4285F4; color: white; border-radius: 4px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
         .review-btn:hover { background: #357ae8; transform: scale(1.05); }
@@ -71,6 +83,7 @@
 
         footer { background: var(--dark); color: white; padding: 30px; text-align: center; }
         .footer-logo { font-size: 0.7rem; color: #777; margin-top: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-rights-bar { background: var(--dark); color: white; padding: 20px; text-align: center; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
@@ -102,7 +115,7 @@
         <h3>Contact Us</h3>
         <div class="btn-container">
             <a href="tel:9562210020" class="btn call-btn"><i class="fas fa-phone-alt"></i> Call Now</a>
-            <a href="https://wa.me/919562210020" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://wa.me/916238308850" class="btn wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             <a href="mailto:lensavenue2@gmail.com" class="btn mail-btn"><i class="fas fa-envelope"></i> Email Us</a>
         </div>
     </section>
@@ -165,6 +178,42 @@
         <img src="la6.jpg" alt="Promo Banner" class="bottom-banner">
     </section>
 
+    <section class="enquiry-section" id="enquiry">
+        <div class="enquiry-container">
+            <h2>WHATSAPP ENQUIRY</h2>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="wa_name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label>Enquiry For</label>
+                <select id="wa_category">
+                    <option value="Both (Frames + Lenses)">Both (Frames + Lenses)</option>
+                    <option value="Only Frames">Only Frames</option>
+                    <option value="Only Lenses">Only Lenses</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Lens Features Required</label>
+                <div class="feature-grid">
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="UV Glass"> UV Glass</label>
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="Polarized Glass"> Polarized Glass</label>
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="Power Glass"> Power Glass</label>
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="Anti-Glare Glass"> Anti-Glare Glass</label>
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="Blue Cut Glass"> Blue Cut Glass</label>
+                    <label class="feature-item"><input type="checkbox" class="wa_feature" value="Progressive Lens"> Progressive Lens</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Details</label>
+                <textarea id="wa_message" rows="3" placeholder="Specify brand or requirements..."></textarea>
+            </div>
+            <button type="button" onclick="sendWhatsAppEnquiry()" class="wa-submit-btn">
+                <i class="fab fa-whatsapp"></i> SEND ENQUIRY ON WHATSAPP
+            </button>
+        </div>
+    </section>
+
     <section class="review-section">
         <h3>5.0 ★ Highly Rated</h3>
         <p style="margin-bottom: 20px; color: #666;">Check out our 21 reviews on Google</p>
@@ -178,7 +227,7 @@
     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 	
-        <p>Branches: Thiruvalla | Pandalam | Kottayam | Ettumanoor | Poochankal</p>
+        <p style="text-align: center; padding: 10px;">Branches: Thiruvalla | Pandalam | Kottayam | Ettumanoor | Poochankal</p>
         <div class="footer-rights-bar">
     <div class="rights-text">
         © 2026 Lens Avenue Opticals. All Rights Reserved.
@@ -186,9 +235,25 @@
     <div class="max-signature">
         Digital Architecture & Tech by <strong>MaxEfex</strong>
     </div>
-    </footer>
+    </div>
+
+    <script>
+        function sendWhatsAppEnquiry() {
+            const name = document.getElementById('wa_name').value;
+            const cat = document.getElementById('wa_category').value;
+            const msg = document.getElementById('wa_message').value;
+            const features = Array.from(document.querySelectorAll('.wa_feature:checked')).map(cb => cb.value).join(', ');
+
+            if (!name) { 
+                alert("Please enter your name"); 
+                return; 
+            }
+
+            const text = `*Lens Avenue Enquiry*\n\n*Name:* ${name}\n*Product:* ${cat}\n*Features:* ${features || 'None selected'}\n*Details:* ${msg}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/916238308850?text=${encodedText}`, '_blank');
+        }
+    </script>
 
 </body>
-
 </html>
-
